@@ -12,6 +12,7 @@ import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 import Icon from 'react-native-vector-icons/Feather';
+import ImagePicker from 'react-native-image-picker';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -114,8 +115,12 @@ const Profile: React.FC = () => {
         );
       }
     },
-    [navigation],
+    [navigation, updateUser],
   );
+
+  const handleUpdateAvatar = useCallback(() => {
+    ImagePicker.sho;
+  }, []);
 
   const handleGoBack = useCallback(() => {
     navigation.goBack();
